@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Zilla+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <title>TaskMaster</title>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-8 m-auto text-center">
+                <h1 class="display-3">TaskMaster</h1>
+            </div>
+        </div>
+
+    </header>
+    <main class="container-fluid">
+        <form class="row my-2" onsubmit="app.listsController.addList(event)">
+            <div class="col-2">
+                <label for="name" class="sr-only">List Name</label>
+                <input required type="text" minlength="3" maxlength="15" name="name"
+                    class="form-control border-top-0 border-right-0 border-left-0 bg-transparent"
+                    placeholder="List Name">
+            </div>
+            <div class="col-1">
+                <label for="color" class="sr-only">List Color</label>
+                <input required type="color" name="color" class="form-control bg-transparent border-0">
+            </div>
+            <button class="btn btn-dark text-light">Create</button>
+        </form>
+        <div class="row justify-content-around" id="lists">
+
+        </div>
+    </main>
+
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
